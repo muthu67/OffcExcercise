@@ -1,0 +1,15 @@
+<div class="row">
+    <h2>Chat App</h2>
+    <div class="col-md-6">
+      <div class="form-group">
+        <label for="">Enter your name</label>
+        <input type="text" class="form-control" #chatName>
+      </div>
+      <div class="form-group">
+        <label for="">Enter your comment</label>
+        <input type="text" class="form-control" #chatComment>
+      </div>
+      <button class="btn btn-primary" (click)="OnPrivateClick()">Private</button>
+      <button class="btn btn-success" (click)="OnPublicClick()">Public</button>
+    </div>
+  </div>

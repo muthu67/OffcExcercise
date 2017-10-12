@@ -7,22 +7,24 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   chatHistory = [];
-  chatName: string = '';
-  chatComment: string = '';
   
-  OnPrivateClick(){
+  ngOnInit(){
+    console.log('App component Initiated!');
+  }
+
+  OnPrivateChatAdded(chatFeed: {name: string, comment: string}){
     this.chatHistory.push({
       type:'private',
-      name: this.chatName,
-      comment: this.chatComment
+      name: chatFeed.name,
+      comment: chatFeed.comment
     })
   }
 
-  OnPublicClick(){
+  OnPublichChatAdded(chatFeed: {name: string, comment: string}){
     this.chatHistory.push({
       type:'public',
-      name: this.chatName,
-      comment: this.chatComment
+      name: chatFeed.name,
+      comment: chatFeed.comment,
     })
   }
 }

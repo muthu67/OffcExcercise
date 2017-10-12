@@ -1,0 +1,7 @@
+<div class="card text-white" [ngClass]="{'bg-primary': chatHistory.type === 'private', 'bg-success': chatHistory.type === 'public'}">
+    <div class="card-body" >
+        <div class="card-header">{{chatHistory.name}}</div>
+        <div class="card-text">{{chatHistory.comment}}</div>
+    </div>
+    <hr />
+</div>

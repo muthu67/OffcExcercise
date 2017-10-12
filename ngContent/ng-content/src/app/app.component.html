@@ -1,30 +1,13 @@
 <div class="container">
-  <div class="row">
-    <h2>Chat App</h2>
-    <div class="col-md-6">
-      <div class="form-group">
-        <label for="">Enter your name</label>
-        <input type="text" class="form-control" [(ngModel)]="chatName">
-      </div>
-      <div class="form-group">
-        <label for="">Enter your comment</label>
-        <input type="text" class="form-control" [(ngModel)]="chatComment">
-      </div>
-      <button class="btn btn-primary" (click)="OnPrivateClick()">Private</button>
-      <button class="btn btn-success" (click)="OnPublicClick()">Public</button>
-    </div>
-  </div>
-  <hr />
-  <div class="row">
-    <div class="col-md-12">
-      <div *ngFor="let chat of chatHistory">
-        <div class="card text-white" [ngClass]="{'bg-primary': chat.type === 'private', 'bg-success': chat.type === 'public'}">
-          <div class="card-body" >
-            <div class="card-header">{{chat.name}}</div>
-            <div class="card-text">{{chat.comment}}</div>
-          </div>
+    <chat-input (privateChatCreated)="OnPrivateChatAdded($event)" (publicChatCreated)="OnPublichChatAdded($event)"></chat-input>
+    <hr />
+    <div class="row">
+      <div class="col-md-12">
+        <div> 
+            <chat-display *ngFor="let chat of chatHistory" [feed]="chat">
+              Content fetched from parent component...
+            </chat-display>
         </div>
       </div>
     </div>
   </div>
-</div>
