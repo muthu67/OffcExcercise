@@ -26,7 +26,9 @@ export class AppComponent {
     this.chatHistory.push({
       name:DailyTrackerInputModel.name,
       task:DailyTrackerInputModel.task,
-      hours:DailyTrackerInputModel.hours
+      hours:DailyTrackerInputModel.hours,
+      date:new Date('DD/MMM/yyyy')
+
     })
   }
   OnPublicClick(){

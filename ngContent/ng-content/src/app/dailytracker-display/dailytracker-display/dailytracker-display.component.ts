@@ -5,7 +5,7 @@ import { Component, OnInit,Input } from '@angular/core';
   templateUrl: './dailytracker-display.component.html'
 })
 export class DailytrackerDisplayComponent implements OnInit {
-  @Input('feed') chatHistory: {name: string, task: string,hours: string};
+  @Input('feed') chatHistory: {name: string, task: string,hours: string,date:string};
   constructor() { console.log('app daily tracker display Constructed!');}
 
   ngOnInit() {

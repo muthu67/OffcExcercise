@@ -5,9 +5,13 @@
   </div>
   <hr />
   <div class="row">
-    <div class="col-md-12">        
+    <div class="col-md-12">
+        <h1>Daily Traker</h1>
+        <table class="table table-striped">
+          <thead><th>Name</th><th>Task</th><th>Hours</th></thead>
       <app-dailytracker-display *ngFor="let chat of chatHistory" [feed]="chat">        
       </app-dailytracker-display>
+    </table>
     </div>
   </div>
 </div>
