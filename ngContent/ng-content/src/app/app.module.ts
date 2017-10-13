@@ -3,14 +3,14 @@ import { NgModule } from '@angular/core';
 
 import { AppComponent } from './app.component';
 import { FormsModule } from '@angular/forms';
-import{ FeedBackDisplayComponent } from './feedback-display/feedback-display.component'
-import{ FeedBackInputComponent } from './feedback-input/feedback-input.component'
+import { DailytrackerInputComponent } from './dailytracker-input/dailytracker-input/dailytracker-input.component';
+import { DailytrackerDisplayComponent } from './dailytracker-display/dailytracker-display/dailytracker-display.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    FeedBackDisplayComponent,
-    FeedBackInputComponent
+    DailytrackerInputComponent,
+    DailytrackerDisplayComponent
   ],
   imports: [
     BrowserModule,

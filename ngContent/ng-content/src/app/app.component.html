@@ -1,13 +1,14 @@
 <div class="container">
   <div class="row">
-    <h2>Chat App</h2>
-    <feedback-input></feedback-input>
+    <h2>Daily Tracker</h2>
+    <app-dailytracker-input (submittedForm)='onSubmittedFormClicked($event)'></app-dailytracker-input>
   </div>
   <hr />
   <div class="row">
-    <div class="col-md-12">
-      <feedback-display *ngFor="let chat of chatHistory">        
-      </feedback-display>
+    <div class="col-md-12">        
+      <app-dailytracker-display *ngFor="let chat of chatHistory" [feed]="chat">        
+      </app-dailytracker-display>
     </div>
   </div>
 </div>
+

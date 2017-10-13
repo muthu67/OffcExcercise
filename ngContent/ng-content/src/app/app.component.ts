@@ -8,18 +8,27 @@ import { Component } from '@angular/core';
 export class AppComponent {
   chatHistory = [];
   empName: string = '';
-  empComment: string = '';
+  empTask: string = '';
+  empHrs: string = '';
   
-  
+  ngOnInit(){
+    console.log('AppComponent Initiated!');
+  }  
   OnPrivateClick(){
-    this.chatHistory.push({
-      type:'private',
+    this.chatHistory.push({      
       name: this.empName,
-      comment: this.empComment
+      comment: this.empTask,
+      hours: this.empHrs
     })
   }
-
+  onSubmittedFormClicked(DailyTrackerInputModel: {name: string, task: string, hours:string}){
+    console.log("appcomponent registerd ");
+    this.chatHistory.push({
+      name:DailyTrackerInputModel.name,
+      task:DailyTrackerInputModel.task,
+      hours:DailyTrackerInputModel.hours
+    })
+  }
   OnPublicClick(){
-   
   }
 }
