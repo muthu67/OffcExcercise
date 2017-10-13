@@ -7,22 +7,19 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   chatHistory = [];
-  chatName: string = '';
-  chatComment: string = '';
+  empName: string = '';
+  empComment: string = '';
+  
   
   OnPrivateClick(){
     this.chatHistory.push({
       type:'private',
-      name: this.chatName,
-      comment: this.chatComment
+      name: this.empName,
+      comment: this.empComment
     })
   }
 
   OnPublicClick(){
-    this.chatHistory.push({
-      type:'public',
-      name: this.chatName,
-      comment: this.chatComment
-    })
+   
   }
 }
