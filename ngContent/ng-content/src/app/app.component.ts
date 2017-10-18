@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Employee } from './Employee';
 
 @Component({
   selector: 'app-root',
@@ -6,31 +7,9 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  chatHistory = [];
-  empName: string = '';
-  empTask: string = '';
-  empHrs: string = '';
-  
-  ngOnInit(){
-    console.log('AppComponent Initiated!');
-  }  
-  OnPrivateClick(){
-    this.chatHistory.push({      
-      name: this.empName,
-      comment: this.empTask,
-      hours: this.empHrs
-    })
-  }
-  onSubmittedFormClicked(DailyTrackerInputModel: {name: string, task: string, hours:string}){
-    console.log("appcomponent registerd ");
-    this.chatHistory.push({
-      name:DailyTrackerInputModel.name,
-      task:DailyTrackerInputModel.task,
-      hours:DailyTrackerInputModel.hours,
-      date:new Date('DD/MMM/yyyy')
-
-    })
-  }
-  OnPublicClick(){
+  title = 'Employee App';
+  empApp = new Employee('Muthu', 'mani');
+  constructor() {
+    console.log('App component initiated');
   }
 }

@@ -1,10 +1,11 @@
 <div class="container">
-  <div class="row">
+  <!-- <div class="row">
     <h2>Daily Tracker</h2>
     <app-dailytracker-input (submittedForm)='onSubmittedFormClicked($event)'></app-dailytracker-input>
-  </div>
+  </div> -->
   <hr />
-  <div class="row">
+
+  <!-- <div class="row">
     <div class="col-md-12">
         <h1>Daily Traker</h1>
         <table class="table table-striped">
@@ -13,6 +14,9 @@
       </app-dailytracker-display>
     </table>
     </div>
-  </div>
+  </div> -->
+  <app-employee [empApp]='empApp'>
+
+  </app-employee>
 </div>
 
