@@ -3,12 +3,14 @@ import { NgModule } from '@angular/core';
 
 import { AppComponent } from './app.component';
 import { FormsModule } from '@angular/forms';
-import { ChildComponent } from './child.component';
+import { IdLabCustomeAttributeDirective } from './idlab-customattribute.directive';
+import { idLabCustomAttributeDirective } from './idlab-custom1attribute.directive';
 
 @NgModule({
   declarations: [
     AppComponent,
-    ChildComponent
+    IdLabCustomeAttributeDirective,
+    idLabCustomAttributeDirective
   ],
   imports: [
     BrowserModule,
